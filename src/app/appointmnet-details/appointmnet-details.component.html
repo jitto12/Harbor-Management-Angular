@@ -1,0 +1,52 @@
+<header class="bg-dark pt-4">
+    <div class="row">
+        <div class="col-6">
+            <h1 class="text-warning text-center">BOAT HUB</h1>
+        </div>
+        <div class="col-6 text-center pt-3">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a class="text-white text-decoration-none" routerLink="/adminhome">Home /</a></li>
+                <li class="list-inline-item"><a class="text-white text-decoration-none" routerLink="/contact">Contact /</a></li>
+                <li class="list-inline-item"><a class="text-white text-decoration-none" routerLink="/about">About</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center text-decoration-underline">APPOINTMENTS</h1>
+        </div>
+        <table class="table">
+                <thead>
+                    <tr>
+                        <th>Customer Name</th>
+                        <th>Phone Number</th>
+                        <th>Boat Name</th>
+                        <th>Boat Type</th>
+                        <th>Boat Number</th>
+                        <th>Service Type</th>
+                        <th>Preffered Date</th>
+                        <th>Preffered Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let appointments of mechanicAppointment">
+                        <td>{{ appointments.name }}</td>
+                        <td>{{ appointments.phoneNumber }}</td>
+                        <td>{{ appointments.boatName }}</td>
+                        <td>{{ appointments.boatType }}</td>
+                        <td>{{ appointments.boatNumber }}</td>
+                        <td>{{ appointments.serviceType }}</td>
+                        <td>{{ appointments.prefferedDate }}</td>
+                        <td>{{ appointments.prefferedTime }}</td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+

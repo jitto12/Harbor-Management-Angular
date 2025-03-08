@@ -1,0 +1,59 @@
+<header class="p-3 bg-dark">
+    <div class="row">
+        <div class="col-6">
+                <h1 class="text-warning text-center">BOAT HUB</h1>
+        </div>
+        <div class="col-6 text-center">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a class="text-white text-decoration-none" routerLink="/home">Home /</a></li>
+                    <li class="list-inline-item"><a class="text-white text-decoration-none" routerLink="/contact">Contact /</a></li>
+                    <li class="list-inline-item"><a class="text-white text-decoration-none" routerLink="/about">About</a></li>
+                </ul>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center text-danger text-decoration-underline">Mechanic Appointment Form</h1>
+        </div>
+        <div>
+            <form (ngSubmit)="addMechanicAppointment()">
+                <h3 class="text-center col-12 fw-bold pt-2 text-decoration-underline">User Information</h3>
+                <label class="col-4 col-lg-6 text-center pt-2 fw-bold" for="name:">Name:</label>
+                <input class="col-8 col-lg-6" [(ngModel)]="mechanicAppointment.name" type="text" id="name" name="name" placeholder="Your Name" required>
+                <label class="col-4 col-lg-6 text-center pt-2 fw-bold" for="phonenumber">Phone Number:</label>
+                <input class="col-8 col-lg-6" [(ngModel)]="mechanicAppointment.phoneNumber" type="number" id="phonenumber" name="phoneNumber" placeholder="Enter Your Phone Number" required>
+                <h3 class="text-center col-12 fw-bold pt-2 text-decoration-underline">Boat Details</h3>
+                <label class="col-4 col-lg-6 text-center pt-2 fw-bold" for="boatname">Boat Name:</label>
+                <input class="col-8 col-lg-6" [(ngModel)]="mechanicAppointment.boatName" type="text" id="boatname" name="boatName" placeholder="Your Boat Name">
+                <label class="col-4 col-lg-6 text-center pt-2 fw-bold" for="boattype">Boat Type:</label>
+                <input class="col-8 col-lg-6" [(ngModel)]="mechanicAppointment.boatType" type="text" id="boattype" name="boatType" placeholder="Your Boat Type" required>
+                <label class="col-4 col-lg-6 text-center pt-2 fw-bold" for="boatregno">Boat Number:</label>
+                <input class="col-8 col-lg-6" [(ngModel)]="mechanicAppointment.boatNumber" type="text" id="boatregno" name="boatNumber" placeholder="Registration Number" required>
+                <h3 class="text-center col-12 fw-bold pt-2 text-decoration-underline">Service Selection</h3>
+                <label class="col-4 col-lg-6 text-center pt-2 fw-bold" for="servicetype">Service Type:</label>
+                <input class="col-8 col-lg-6" [(ngModel)]="mechanicAppointment.serviceType" type="text" id="servicetype" name="serviceType" placeholder="Repair or Maintainence" required>
+                <label class="col-4 col-lg-6 text-center pt-2 fw-bold" for="date">Preffered Date:</label>
+                <input class="col-8 col-lg-6" [(ngModel)]="mechanicAppointment.prefferedDate" type="text" id="date" name="prefferedDate" placeholder="Enter a Date" required>
+                <label class="col-4 col-lg-6 text-center pt-2 fw-bold" for="time">Preffered Time:</label>
+                <input class="col-8 col-lg-6" [(ngModel)]="mechanicAppointment.prefferedTime" type="text" id="time" name="prefferedTime" placeholder="Enter a Date">
+                <div class="col-12 text-center pt-3">
+                    <button class="btn btn-primary" type="submit">SUBMIT</button>
+                </div>
+            </form>
+            <div class="col-12 pt-5">
+                <p class="text-success fw-bold text-center">{{this.message}}</p>
+                <p class="text-danger fw-bold text-center">{{this.message1}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="row">
+        <div class="col-12">
+            <p class="footer text-center pt-5">&copy; 2025 BoatHub. All rights reserved.</p>
+        </div>
+    </div>
+</footer>   

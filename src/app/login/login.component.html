@@ -1,0 +1,46 @@
+<body>
+    <header class="bg-dark">
+        <div class="row">
+            <div class="col-6">
+                <h1 class="text-white text-center">Welcome to <span class="text-warning">BOAT HUB!</span></h1>
+            </div>
+            <div class="col-6 text-center">
+                <ul class="list-inline pt-3">
+                    <li class="list-inline-item"><a class="text-decoration-none text-white" routerLink="/admin">Admin Login /</a></li>
+                    <li class="list-inline-item"><a class="text-decoration-none text-white" routerLink="/contact">Contact /</a></li>
+                    <li class="list-inline-item"><a class="text-decoration-none text-white" routerLink="/about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <form (ngSubmit)="login()">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="h1">SIGN IN</h1>
+                </div>
+            
+                <div class="col-12">
+                    <label class="label1" for="username">Username:</label>
+                    <input class="username" [(ngModel)]="user.username" placeholder="username" type="text" name="username" id="username" required>
+                </div>
+            
+                <div class="col-12">
+                    <label class="label2" for="password">Password:</label>
+                    <input class="password" [(ngModel)]="user.password" placeholder="password" type="password" name="password" id="password" required>
+                </div>
+            
+                <div class="col-12">
+                    <button class="button" type="submit">LOGIN</button>
+                </div>
+            
+                <div class="col-12">
+                    <p class="p">Don't Have An Account?<a routerLink="/register">Register Here</a></p>
+                </div>
+            </div>
+            <div class="text-danger">
+                <p>{{this.message}}</p>
+            </div>
+        </div>
+    </form>
+</body>

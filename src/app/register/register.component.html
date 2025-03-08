@@ -1,0 +1,43 @@
+<header class="bg-dark">
+    <div class="row">
+        <div class="col-6">
+            <h1 class="text-white text-center">Welcome to <span class="text-warning">BOAT HUB!</span></h1>
+        </div>
+        <div class="col-6 text-center">
+            <ul class="list-inline pt-3">
+                <li class="list-inline-item"><a class="text-decoration-none text-white" routerLink="/contact">Contact /</a></li>
+                <li class="list-inline-item"><a class="text-decoration-none text-white" routerLink="/about">About</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<form (ngSubmit)="register()">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-decoration-underline">REGISTRATION</h1>
+            </div>
+            <div class="col-12">
+                <label class="label4" for="Phone_number">Phone Number:</label>
+                <input [(ngModel)]="user.phoneNumber" type="text" name="Phone_number" id="Phone_number" required>
+            </div>
+            <div class="col-12">
+                <label class="label5" for="username">Username:</label>
+                <input [(ngModel)]="user.username" type="text" name="username" id="username" required>
+            </div>
+            <div class="col-12">
+                <label class="label6" for="password">Password:</label>
+                <input [(ngModel)]="user.password" type="password" name="password" id="password" required minlength="8">
+            </div>
+            <div class="col-12">
+                <button class="button" type="submit">REGISTER</button>
+            </div>
+            <div class="col-12">
+                <p class="p">Already Have an Account?<a routerLink="/login">Login Here</a></p>
+            </div>
+            <div class="col-12">
+                <p class="text-danger fw-bold">{{this.message}}</p>
+            </div>
+        </div>
+    </div>
+</form>
